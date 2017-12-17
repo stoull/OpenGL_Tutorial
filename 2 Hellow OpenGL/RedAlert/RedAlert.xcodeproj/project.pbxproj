@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C9FBAF321FE4DBD2006CD722 /* HUTBaseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBAF311FE4DBD2006CD722 /* HUTBaseEffect.swift */; };
-		C9FBAF341FE4E063006CD722 /* HUTVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBAF331FE4E063006CD722 /* HUTVertex.swift */; };
-		E447C40D1FE29930009BCBA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447C40C1FE29930009BCBA0 /* AppDelegate.swift */; };
-		E447C40F1FE29930009BCBA0 /* HUTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447C40E1FE29930009BCBA0 /* HUTViewController.swift */; };
-		E447C4121FE29930009BCBA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E447C4101FE29930009BCBA0 /* Main.storyboard */; };
-		E447C4141FE29930009BCBA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E447C4131FE29930009BCBA0 /* Assets.xcassets */; };
-		E447C4171FE29930009BCBA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E447C4151FE29930009BCBA0 /* LaunchScreen.storyboard */; };
+		C9AED1081FE65B8B00FA5BCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AED1071FE65B8B00FA5BCC /* ViewController.swift */; };
+		C9FBAF421FE562AC006CD722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBAF411FE562AC006CD722 /* AppDelegate.swift */; };
+		C9FBAF441FE562AC006CD722 /* HUTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBAF431FE562AC006CD722 /* HUTViewController.swift */; };
+		C9FBAF471FE562AC006CD722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FBAF451FE562AC006CD722 /* Main.storyboard */; };
+		C9FBAF4A1FE562AC006CD722 /* RedAlert.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9FBAF481FE562AC006CD722 /* RedAlert.xcdatamodeld */; };
+		C9FBAF4C1FE562AC006CD722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FBAF4B1FE562AC006CD722 /* Assets.xcassets */; };
+		C9FBAF4F1FE562AC006CD722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FBAF4D1FE562AC006CD722 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C9FBAF311FE4DBD2006CD722 /* HUTBaseEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUTBaseEffect.swift; sourceTree = "<group>"; };
-		C9FBAF331FE4E063006CD722 /* HUTVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUTVertex.swift; sourceTree = "<group>"; };
-		E447C4091FE29930009BCBA0 /* Hello OpenGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello OpenGL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E447C40C1FE29930009BCBA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E447C40E1FE29930009BCBA0 /* HUTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUTViewController.swift; sourceTree = "<group>"; };
-		E447C4111FE29930009BCBA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E447C4131FE29930009BCBA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E447C4161FE29930009BCBA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E447C4181FE29930009BCBA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9AED1071FE65B8B00FA5BCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9FBAF3E1FE562AC006CD722 /* RedAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9FBAF411FE562AC006CD722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9FBAF431FE562AC006CD722 /* HUTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUTViewController.swift; sourceTree = "<group>"; };
+		C9FBAF461FE562AC006CD722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9FBAF491FE562AC006CD722 /* RedAlert.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RedAlert.xcdatamodel; sourceTree = "<group>"; };
+		C9FBAF4B1FE562AC006CD722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9FBAF4E1FE562AC006CD722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9FBAF501FE562AC006CD722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E447C4061FE29930009BCBA0 /* Frameworks */ = {
+		C9FBAF3B1FE562AC006CD722 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,82 +39,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C9FBAF301FE4DB9B006CD722 /* HUTBaseEffects */ = {
+		C9FBAF351FE562AC006CD722 = {
 			isa = PBXGroup;
 			children = (
-				C9FBAF311FE4DBD2006CD722 /* HUTBaseEffect.swift */,
-				C9FBAF331FE4E063006CD722 /* HUTVertex.swift */,
-			);
-			path = HUTBaseEffects;
-			sourceTree = "<group>";
-		};
-		E447C4001FE29930009BCBA0 = {
-			isa = PBXGroup;
-			children = (
-				E447C40B1FE29930009BCBA0 /* Hello OpenGL */,
-				E447C40A1FE29930009BCBA0 /* Products */,
+				C9FBAF401FE562AC006CD722 /* RedAlert */,
+				C9FBAF3F1FE562AC006CD722 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E447C40A1FE29930009BCBA0 /* Products */ = {
+		C9FBAF3F1FE562AC006CD722 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E447C4091FE29930009BCBA0 /* Hello OpenGL.app */,
+				C9FBAF3E1FE562AC006CD722 /* RedAlert.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E447C40B1FE29930009BCBA0 /* Hello OpenGL */ = {
+		C9FBAF401FE562AC006CD722 /* RedAlert */ = {
 			isa = PBXGroup;
 			children = (
-				C9FBAF301FE4DB9B006CD722 /* HUTBaseEffects */,
-				E447C40C1FE29930009BCBA0 /* AppDelegate.swift */,
-				E447C40E1FE29930009BCBA0 /* HUTViewController.swift */,
-				E447C4101FE29930009BCBA0 /* Main.storyboard */,
-				E447C4131FE29930009BCBA0 /* Assets.xcassets */,
-				E447C4151FE29930009BCBA0 /* LaunchScreen.storyboard */,
-				E447C4181FE29930009BCBA0 /* Info.plist */,
+				C9FBAF411FE562AC006CD722 /* AppDelegate.swift */,
+				C9AED1071FE65B8B00FA5BCC /* ViewController.swift */,
+				C9FBAF431FE562AC006CD722 /* HUTViewController.swift */,
+				C9FBAF451FE562AC006CD722 /* Main.storyboard */,
+				C9FBAF4B1FE562AC006CD722 /* Assets.xcassets */,
+				C9FBAF4D1FE562AC006CD722 /* LaunchScreen.storyboard */,
+				C9FBAF501FE562AC006CD722 /* Info.plist */,
+				C9FBAF481FE562AC006CD722 /* RedAlert.xcdatamodeld */,
 			);
-			path = "Hello OpenGL";
+			path = RedAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E447C4081FE29930009BCBA0 /* Hello OpenGL */ = {
+		C9FBAF3D1FE562AC006CD722 /* RedAlert */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E447C41B1FE29930009BCBA0 /* Build configuration list for PBXNativeTarget "Hello OpenGL" */;
+			buildConfigurationList = C9FBAF531FE562AC006CD722 /* Build configuration list for PBXNativeTarget "RedAlert" */;
 			buildPhases = (
-				E447C4051FE29930009BCBA0 /* Sources */,
-				E447C4061FE29930009BCBA0 /* Frameworks */,
-				E447C4071FE29930009BCBA0 /* Resources */,
+				C9FBAF3A1FE562AC006CD722 /* Sources */,
+				C9FBAF3B1FE562AC006CD722 /* Frameworks */,
+				C9FBAF3C1FE562AC006CD722 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Hello OpenGL";
-			productName = "Hello OpenGL";
-			productReference = E447C4091FE29930009BCBA0 /* Hello OpenGL.app */;
+			name = RedAlert;
+			productName = RedAlert;
+			productReference = C9FBAF3E1FE562AC006CD722 /* RedAlert.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E447C4011FE29930009BCBA0 /* Project object */ = {
+		C9FBAF361FE562AC006CD722 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = hut;
+				ORGANIZATIONNAME = CCApril;
 				TargetAttributes = {
-					E447C4081FE29930009BCBA0 = {
+					C9FBAF3D1FE562AC006CD722 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
 					};
 				};
 			};
-			buildConfigurationList = E447C4041FE29930009BCBA0 /* Build configuration list for PBXProject "Hello OpenGL" */;
+			buildConfigurationList = C9FBAF391FE562AC006CD722 /* Build configuration list for PBXProject "RedAlert" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,56 +114,56 @@
 				en,
 				Base,
 			);
-			mainGroup = E447C4001FE29930009BCBA0;
-			productRefGroup = E447C40A1FE29930009BCBA0 /* Products */;
+			mainGroup = C9FBAF351FE562AC006CD722;
+			productRefGroup = C9FBAF3F1FE562AC006CD722 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E447C4081FE29930009BCBA0 /* Hello OpenGL */,
+				C9FBAF3D1FE562AC006CD722 /* RedAlert */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E447C4071FE29930009BCBA0 /* Resources */ = {
+		C9FBAF3C1FE562AC006CD722 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E447C4171FE29930009BCBA0 /* LaunchScreen.storyboard in Resources */,
-				E447C4141FE29930009BCBA0 /* Assets.xcassets in Resources */,
-				E447C4121FE29930009BCBA0 /* Main.storyboard in Resources */,
+				C9FBAF4F1FE562AC006CD722 /* LaunchScreen.storyboard in Resources */,
+				C9FBAF4C1FE562AC006CD722 /* Assets.xcassets in Resources */,
+				C9FBAF471FE562AC006CD722 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E447C4051FE29930009BCBA0 /* Sources */ = {
+		C9FBAF3A1FE562AC006CD722 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9FBAF321FE4DBD2006CD722 /* HUTBaseEffect.swift in Sources */,
-				C9FBAF341FE4E063006CD722 /* HUTVertex.swift in Sources */,
-				E447C40F1FE29930009BCBA0 /* HUTViewController.swift in Sources */,
-				E447C40D1FE29930009BCBA0 /* AppDelegate.swift in Sources */,
+				C9FBAF441FE562AC006CD722 /* HUTViewController.swift in Sources */,
+				C9FBAF421FE562AC006CD722 /* AppDelegate.swift in Sources */,
+				C9AED1081FE65B8B00FA5BCC /* ViewController.swift in Sources */,
+				C9FBAF4A1FE562AC006CD722 /* RedAlert.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E447C4101FE29930009BCBA0 /* Main.storyboard */ = {
+		C9FBAF451FE562AC006CD722 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E447C4111FE29930009BCBA0 /* Base */,
+				C9FBAF461FE562AC006CD722 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		E447C4151FE29930009BCBA0 /* LaunchScreen.storyboard */ = {
+		C9FBAF4D1FE562AC006CD722 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E447C4161FE29930009BCBA0 /* Base */,
+				C9FBAF4E1FE562AC006CD722 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -179,7 +171,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E447C4191FE29930009BCBA0 /* Debug */ = {
+		C9FBAF511FE562AC006CD722 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +228,7 @@
 			};
 			name = Debug;
 		};
-		E447C41A1FE29930009BCBA0 /* Release */ = {
+		C9FBAF521FE562AC006CD722 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -286,15 +278,15 @@
 			};
 			name = Release;
 		};
-		E447C41C1FE29930009BCBA0 /* Debug */ = {
+		C9FBAF541FE562AC006CD722 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Hello OpenGL/Info.plist";
+				INFOPLIST_FILE = RedAlert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.stoull.hut.Hello-OpenGL";
+				PRODUCT_BUNDLE_IDENTIFIER = com.april.RedAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -302,15 +294,15 @@
 			};
 			name = Debug;
 		};
-		E447C41D1FE29930009BCBA0 /* Release */ = {
+		C9FBAF551FE562AC006CD722 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Hello OpenGL/Info.plist";
+				INFOPLIST_FILE = RedAlert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.stoull.hut.Hello-OpenGL";
+				PRODUCT_BUNDLE_IDENTIFIER = com.april.RedAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -321,25 +313,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E447C4041FE29930009BCBA0 /* Build configuration list for PBXProject "Hello OpenGL" */ = {
+		C9FBAF391FE562AC006CD722 /* Build configuration list for PBXProject "RedAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E447C4191FE29930009BCBA0 /* Debug */,
-				E447C41A1FE29930009BCBA0 /* Release */,
+				C9FBAF511FE562AC006CD722 /* Debug */,
+				C9FBAF521FE562AC006CD722 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E447C41B1FE29930009BCBA0 /* Build configuration list for PBXNativeTarget "Hello OpenGL" */ = {
+		C9FBAF531FE562AC006CD722 /* Build configuration list for PBXNativeTarget "RedAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E447C41C1FE29930009BCBA0 /* Debug */,
-				E447C41D1FE29930009BCBA0 /* Release */,
+				C9FBAF541FE562AC006CD722 /* Debug */,
+				C9FBAF551FE562AC006CD722 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9FBAF481FE562AC006CD722 /* RedAlert.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9FBAF491FE562AC006CD722 /* RedAlert.xcdatamodel */,
+			);
+			currentVersion = C9FBAF491FE562AC006CD722 /* RedAlert.xcdatamodel */;
+			path = RedAlert.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = E447C4011FE29930009BCBA0 /* Project object */;
+	rootObject = C9FBAF361FE562AC006CD722 /* Project object */;
 }

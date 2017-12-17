@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PdB-d8-bmO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="nCq-kX-xMx">
+            <objects>
+                <viewController id="PdB-d8-bmO" customClass="ViewController" customModule="RedAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z6q-iX-CgO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkT-qY-jaI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="9HZ-af-VzM"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="kSo-Th-fbA" kind="embed" identifier="EmbedRed" id="h84-N5-5nO"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVI-jr-P63">
+                                <rect key="frame" x="0.0" y="148" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="deY-58-073"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="kSo-Th-fbA" kind="embed" identifier="EmbedGreen" id="hTE-wQ-Fcc"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HB6-jJ-9gH">
+                                <rect key="frame" x="0.0" y="276" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0nB-ka-7e8"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="kSo-Th-fbA" kind="embed" identifier="EmbedBlue" id="0pP-4i-Wed"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eux-Qw-ffC">
+                                <rect key="frame" x="0.0" y="404" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="dG4-Yc-Dhh"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="kSo-Th-fbA" kind="embed" identifier="EmbedThreeColor" id="p4F-Kl-4K6"/>
+                                </connections>
+                            </containerView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="2" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="lc8-J5-vLv">
+                                <rect key="frame" x="6" y="540" width="363" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="IRj-jr-geP"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderViewValueDidChange:" destination="PdB-d8-bmO" eventType="valueChanged" id="Mj9-ky-ACE"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i2p-P0-bOx" firstAttribute="trailing" secondItem="Eux-Qw-ffC" secondAttribute="trailing" id="0ri-RG-hQj"/>
+                            <constraint firstItem="HB6-jJ-9gH" firstAttribute="leading" secondItem="i2p-P0-bOx" secondAttribute="leading" id="9Ku-Nc-VR3"/>
+                            <constraint firstItem="lc8-J5-vLv" firstAttribute="leading" secondItem="i2p-P0-bOx" secondAttribute="leading" constant="8" id="A0p-Uz-Z1x"/>
+                            <constraint firstItem="JVI-jr-P63" firstAttribute="top" secondItem="kkT-qY-jaI" secondAttribute="bottom" id="BSZ-T5-lcw"/>
+                            <constraint firstItem="i2p-P0-bOx" firstAttribute="trailing" secondItem="kkT-qY-jaI" secondAttribute="trailing" id="Kdo-Dy-se0"/>
+                            <constraint firstItem="HB6-jJ-9gH" firstAttribute="top" secondItem="JVI-jr-P63" secondAttribute="bottom" id="Nju-vh-i19"/>
+                            <constraint firstItem="kkT-qY-jaI" firstAttribute="leading" secondItem="i2p-P0-bOx" secondAttribute="leading" id="UuV-RP-8Wa"/>
+                            <constraint firstItem="i2p-P0-bOx" firstAttribute="trailing" secondItem="HB6-jJ-9gH" secondAttribute="trailing" id="Vdq-OD-j4W"/>
+                            <constraint firstItem="Eux-Qw-ffC" firstAttribute="leading" secondItem="i2p-P0-bOx" secondAttribute="leading" id="ZBw-HQ-DMJ"/>
+                            <constraint firstItem="Eux-Qw-ffC" firstAttribute="top" secondItem="HB6-jJ-9gH" secondAttribute="bottom" id="dz8-nU-bMY"/>
+                            <constraint firstItem="lc8-J5-vLv" firstAttribute="top" secondItem="Eux-Qw-ffC" secondAttribute="bottom" constant="8" id="o3o-cd-9VH"/>
+                            <constraint firstItem="kkT-qY-jaI" firstAttribute="top" secondItem="i2p-P0-bOx" secondAttribute="top" id="rUh-lj-tZ0"/>
+                            <constraint firstItem="JVI-jr-P63" firstAttribute="leading" secondItem="i2p-P0-bOx" secondAttribute="leading" id="vou-yS-d09"/>
+                            <constraint firstItem="i2p-P0-bOx" firstAttribute="trailing" secondItem="lc8-J5-vLv" secondAttribute="trailing" constant="8" id="xYE-Bh-2Dz"/>
+                            <constraint firstItem="i2p-P0-bOx" firstAttribute="trailing" secondItem="JVI-jr-P63" secondAttribute="trailing" id="xcQ-q0-641"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i2p-P0-bOx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LyD-PN-U2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="-95"/>
+        </scene>
+        <!--GLKit View Controller-->
+        <scene sceneID="eoM-90-0OX">
+            <objects>
+                <viewController id="kSo-Th-fbA" userLabel="GLKit View Controller" customClass="HUTViewController" customModule="RedAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="f3B-oc-UZA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vAO-9I-dPf"/>
+                    </glkView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4R-df-akV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="-96"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="p4F-Kl-4K6"/>
+    </inferredMetricsTieBreakers>
+</document>
