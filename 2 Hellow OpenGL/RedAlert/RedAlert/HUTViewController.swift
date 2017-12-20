@@ -20,10 +20,12 @@ class HUTViewController: GLKViewController {
     private var curGreen: Float = 104.0     // 0 ~ 255
     private var curBlud: Float = 114.0      // 0 ~ 255
     
+    private var timeDelay: Float = 1.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        timeDelay = (rMult * 1 + gMult * 2 + bMult * 3)
         let view : GLKView = self.view as! GLKView
         
         if let openGLContext = EAGLContext.init(api: .openGLES2) {
@@ -40,7 +42,7 @@ class HUTViewController: GLKViewController {
     }
 
     func update() {
-        let changeColorValue: Float = (Float((sinf(Float(self.timeSinceLastResume * 2 * M_PI_2 / secsPerFlash)) * 0.5) + 0.5))
+        let changeColorValue: Float = (Float(timeDelay * (sinf(Float(self.timeSinceLastResume * 2 * M_PI_2 / secsPerFlash)) * 0.5) + 0.5))
         curRed = rMult * changeColorValue
         curGreen = gMult * changeColorValue
         curBlud = bMult * changeColorValue
