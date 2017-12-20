@@ -12,6 +12,9 @@
 		E447C4121FE29930009BCBA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E447C4101FE29930009BCBA0 /* Main.storyboard */; };
 		E447C4141FE29930009BCBA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E447C4131FE29930009BCBA0 /* Assets.xcassets */; };
 		E447C4171FE29930009BCBA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E447C4151FE29930009BCBA0 /* LaunchScreen.storyboard */; };
+		E45A8C851FEA98AA00A613F6 /* HUTBaseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45A8C841FEA98AA00A613F6 /* HUTBaseEffect.swift */; };
+		E45A8C871FEA98EB00A613F6 /* HUTSimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E45A8C861FEA98EB00A613F6 /* HUTSimpleVertex.glsl */; };
+		E45A8C891FEA990100A613F6 /* HUTSimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E45A8C881FEA990100A613F6 /* HUTSimpleFragment.glsl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		E447C4131FE29930009BCBA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E447C4161FE29930009BCBA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E447C4181FE29930009BCBA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E45A8C841FEA98AA00A613F6 /* HUTBaseEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUTBaseEffect.swift; sourceTree = "<group>"; };
+		E45A8C861FEA98EB00A613F6 /* HUTSimpleVertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = HUTSimpleVertex.glsl; sourceTree = "<group>"; };
+		E45A8C881FEA990100A613F6 /* HUTSimpleFragment.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = HUTSimpleFragment.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		E447C40B1FE29930009BCBA0 /* Hello OpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				E45A8C831FEA988400A613F6 /* Effects */,
 				E447C40C1FE29930009BCBA0 /* AppDelegate.swift */,
 				E447C40E1FE29930009BCBA0 /* HUTViewController.swift */,
 				E447C4101FE29930009BCBA0 /* Main.storyboard */,
@@ -62,6 +69,16 @@
 				E447C4181FE29930009BCBA0 /* Info.plist */,
 			);
 			path = "Hello OpenGL";
+			sourceTree = "<group>";
+		};
+		E45A8C831FEA988400A613F6 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				E45A8C841FEA98AA00A613F6 /* HUTBaseEffect.swift */,
+				E45A8C881FEA990100A613F6 /* HUTSimpleFragment.glsl */,
+				E45A8C861FEA98EB00A613F6 /* HUTSimpleVertex.glsl */,
+			);
+			path = Effects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E447C4171FE29930009BCBA0 /* LaunchScreen.storyboard in Resources */,
+				E45A8C891FEA990100A613F6 /* HUTSimpleFragment.glsl in Resources */,
+				E45A8C871FEA98EB00A613F6 /* HUTSimpleVertex.glsl in Resources */,
 				E447C4141FE29930009BCBA0 /* Assets.xcassets in Resources */,
 				E447C4121FE29930009BCBA0 /* Main.storyboard in Resources */,
 			);
@@ -136,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E45A8C851FEA98AA00A613F6 /* HUTBaseEffect.swift in Sources */,
 				E447C40F1FE29930009BCBA0 /* HUTViewController.swift in Sources */,
 				E447C40D1FE29930009BCBA0 /* AppDelegate.swift in Sources */,
 			);
