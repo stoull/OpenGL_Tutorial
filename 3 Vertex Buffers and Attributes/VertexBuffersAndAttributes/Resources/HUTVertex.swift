@@ -9,8 +9,8 @@
 import UIKit
 import GLKit
 
-enum HUTVertextAttributes {
-    case HUTVertextAttributesPosition
+enum HUTVertextAttributes: UInt32 {
+    case position = 0
 }
 
 struct HUTVertex {
