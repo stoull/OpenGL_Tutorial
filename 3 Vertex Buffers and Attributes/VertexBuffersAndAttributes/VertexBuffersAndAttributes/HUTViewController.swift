@@ -21,7 +21,7 @@ class HUTViewController: GLKViewController {
         view.context = EAGLContext.init(api: .openGLES2)!
         
         EAGLContext.setCurrent(view.context)
-        glClearColor(0, 0, 0, 1)
+//        glClearColor(0, 0, 0, 1)
         
         self.setupShader()
         self.setupVertexBuffer()
@@ -30,6 +30,17 @@ class HUTViewController: GLKViewController {
     override func glkView(_ view: GLKView, drawIn rect: CGRect) {
         glClearColor(200.0/225.0, 104.0/255.0, 114.0/255.0, 1.0)
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT))
+        
+        self.shader.prepareToDraw()
+        
+        glEnableVertexAttribArray(HUTVertextAttributes.position.rawValue)
+        
+        glVertexAttribPointer(HUTVertextAttributes.position.rawValue, 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), GLsizei(MemoryLayout<HUTVertex>.size), nil)
+        
+        glBindBuffer(GLenum(GL_ARRAY_BUFFER), self.vertexBuffer);
+        glDrawArrays(GLenum(GL_TRIANGLES), 0, 3);
+        
+        glDisableVertexAttribArray(HUTVertextAttributes.position.rawValue);
     }
     
     private func setupVertexBuffer() {
