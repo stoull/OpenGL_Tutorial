@@ -30,9 +30,9 @@ class HUTViewController: GLKViewController {
     }
     
     private func setupVertexBuffer() {
-        let vertices: [HUTVertex] = [HUTVertex.init(Position: [-1.0, -1.0, 0.0]),
-                                     HUTVertex.init(Position: [1.0, -1.0, 0.0]),
-                                     HUTVertex.init(Position: [0.0, 0.0, 0.0])]
+        let vertices: [HUTVertex] = [HUTVertex.init(Position: (-1.0, -1.0, 0.0)),
+                                     HUTVertex.init(Position: (1.0, -1.0, 0.0)),
+                                     HUTVertex.init(Position: (0.0, 0.0, 0.0))]
         glGenBuffers(1, &self.vertexBuffer)
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), self.vertexBuffer)
         let sizeOfVerties: Int = MemoryLayout<HUTVertex>.size * 3;

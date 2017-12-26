@@ -33,8 +33,12 @@ class HUTBaseEffect: NSObject {
             }
             
             let shaderHandle: GLuint = glCreateShader(shaderType)
+            if shaderHandle == 0 {
+                print("Couldn't create shader")
+            }
+            
             var shaderStringUT8: UnsafePointer<CChar>? = shaderString.utf8String
-            var shaderStringLength: Int32 = Int32(shaderString.length)
+            var shaderStringLength: GLint = GLint(Int32(shaderString.length))
             glShaderSource(shaderHandle, 1, &shaderStringUT8, &shaderStringLength)
             
             glCompileShader(shaderHandle)
@@ -42,11 +46,11 @@ class HUTBaseEffect: NSObject {
             var compileSuccess: GLint = GL_FALSE
             glGetShaderiv(shaderHandle, GLenum(GL_COMPILE_STATUS), &compileSuccess)
             if compileSuccess == GL_FALSE {
-                var messages: [CChar] = Array(repeating: CChar.init(32), count: 256)
+                var messages: [CChar] = Array(repeating: CChar.init(), count: 512)
                 let sizeOfMsg: Int32 = Int32(MemoryLayout<CChar>.size * messages.count)
                 glGetShaderInfoLog(shaderHandle, sizeOfMsg, nil, &messages[0])
-                let meesageString = String.init(describing: messages)
-                print("compileShader: \(meesageString)")
+                let messageString = String.init(cString: messages);
+                print("compileShader: \(messageString)")
                 exit(1)
             }
             return shaderHandle
@@ -73,7 +77,7 @@ class HUTBaseEffect: NSObject {
         var linkSuccess: GLint = GL_FALSE
         glGetProgramiv(self.programHandle, GLenum(GL_LINK_STATUS), &linkSuccess)
         if linkSuccess == GL_FALSE {
-            var messages: [CChar] = Array(repeatElement(CChar.init(32), count: 256))
+            var messages: [CChar] = Array(repeatElement(CChar.init(), count: 256))
             let sizeOfMsg: Int32 = Int32(MemoryLayout<CChar>.size * messages.count)
             glGetProgramInfoLog(self.programHandle, sizeOfMsg, nil, &messages[0])
             let messagesString = String.init(describing: messages)
