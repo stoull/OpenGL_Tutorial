@@ -14,5 +14,6 @@ enum HUTVertextAttributes: UInt32 {
 }
 
 struct HUTVertex {
-    var Position: [GLfloat] = [0.0, 0.0, 0.0]
+    var Position: (GLfloat, GLfloat, GLfloat)
+//    var Position: [GLfloat] = [0.0, 0.0, 0.0]
 }
