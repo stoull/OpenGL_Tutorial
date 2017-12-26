@@ -7,11 +7,12 @@
 //
 
 import UIKit
-import OpenGLES
+//import OpenGLES
+import GLKit
 
 class HUTBaseEffect: NSObject {
     
-    var programHandle: GLuint!
+    var programHandle: GLuint = 0
 
     public init(vertexShader: String, fragmentShader: String) {
         super.init()
@@ -29,10 +30,13 @@ class HUTBaseEffect: NSObject {
             do{
                 shaderString = try String.init(contentsOfFile: shaderPath, encoding: .utf8) as NSString
             }catch {
+                print("Failed to load vertex shader")
                 exit(1)
             }
             
-            let shaderHandle: GLuint = glCreateShader(shaderType)
+            var shaderHandle: GLuint = 0
+            
+            shaderHandle = glCreateShader(shaderType)
             if shaderHandle == 0 {
                 print("Couldn't create shader")
             }
@@ -61,12 +65,12 @@ class HUTBaseEffect: NSObject {
     }
     
     private func comileVertexShader(vertexShader: String, fragmentShader: String) {
+        self.programHandle = glCreateProgram()
         let vertexShaderName: GLuint = self.compileShader(shaderName: vertexShader,
                                                           shaderType: GLenum(GL_VERTEX_SHADER))
         let fragmentShaderName: GLuint = self.compileShader(shaderName: fragmentShader,
                                                     shaderType: GLenum(GL_FRAGMENT_SHADER))
         
-        self.programHandle = glCreateProgram()
         glAttachShader(self.programHandle, vertexShaderName)
         glAttachShader(self.programHandle, fragmentShaderName)
         

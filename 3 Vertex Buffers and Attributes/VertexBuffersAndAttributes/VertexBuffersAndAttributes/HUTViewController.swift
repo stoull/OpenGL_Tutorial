@@ -20,6 +20,9 @@ class HUTViewController: GLKViewController {
         let view: GLKView = self.view as! GLKView
         view.context = EAGLContext.init(api: .openGLES2)!
         
+        EAGLContext.setCurrent(view.context)
+        glClearColor(0, 0, 0, 1)
+        
         self.setupShader()
         self.setupVertexBuffer()
     }
