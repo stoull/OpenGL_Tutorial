@@ -10,7 +10,7 @@ import UIKit
 import GLKit
 
 enum HUTVertextAttributes: UInt32 {
-    case position = 0
+    case position = 0   // layout (location = 0)
 }
 
 struct HUTVertex {
