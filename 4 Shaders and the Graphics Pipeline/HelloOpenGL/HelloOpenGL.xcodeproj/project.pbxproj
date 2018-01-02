@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C911F5DD1FFBC7FC00A4F135 /* HUTVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C911F5D91FFBC7FB00A4F135 /* HUTVertex.swift */; };
+		C911F5DE1FFBC7FC00A4F135 /* HUTSimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C911F5DA1FFBC7FB00A4F135 /* HUTSimpleFragment.glsl */; };
+		C911F5DF1FFBC7FC00A4F135 /* HUTSimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C911F5DB1FFBC7FB00A4F135 /* HUTSimpleVertex.glsl */; };
+		C911F5E01FFBC7FC00A4F135 /* HUTBaseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C911F5DC1FFBC7FC00A4F135 /* HUTBaseEffect.swift */; };
 		E492D7A01FFB9ABD00AFCA00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492D79F1FFB9ABD00AFCA00 /* AppDelegate.swift */; };
 		E492D7A21FFB9ABD00AFCA00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E492D7A11FFB9ABD00AFCA00 /* ViewController.swift */; };
 		E492D7A51FFB9ABD00AFCA00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E492D7A31FFB9ABD00AFCA00 /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C911F5D91FFBC7FB00A4F135 /* HUTVertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUTVertex.swift; sourceTree = "<group>"; };
+		C911F5DA1FFBC7FB00A4F135 /* HUTSimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HUTSimpleFragment.glsl; sourceTree = "<group>"; };
+		C911F5DB1FFBC7FB00A4F135 /* HUTSimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HUTSimpleVertex.glsl; sourceTree = "<group>"; };
+		C911F5DC1FFBC7FC00A4F135 /* HUTBaseEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUTBaseEffect.swift; sourceTree = "<group>"; };
 		E492D79C1FFB9ABD00AFCA00 /* HelloOpenGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloOpenGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E492D79F1FFB9ABD00AFCA00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E492D7A11FFB9ABD00AFCA00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +43,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C911F5D81FFBC7E800A4F135 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C911F5DC1FFBC7FC00A4F135 /* HUTBaseEffect.swift */,
+				C911F5D91FFBC7FB00A4F135 /* HUTVertex.swift */,
+				C911F5DA1FFBC7FB00A4F135 /* HUTSimpleFragment.glsl */,
+				C911F5DB1FFBC7FB00A4F135 /* HUTSimpleVertex.glsl */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E492D7931FFB9ABC00AFCA00 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +73,7 @@
 		E492D79E1FFB9ABD00AFCA00 /* HelloOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				C911F5D81FFBC7E800A4F135 /* Resources */,
 				E492D79F1FFB9ABD00AFCA00 /* AppDelegate.swift */,
 				E492D7A11FFB9ABD00AFCA00 /* ViewController.swift */,
 				E492D7A31FFB9ABD00AFCA00 /* Main.storyboard */,
@@ -124,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E492D7AA1FFB9ABD00AFCA00 /* LaunchScreen.storyboard in Resources */,
+				C911F5DE1FFBC7FC00A4F135 /* HUTSimpleFragment.glsl in Resources */,
+				C911F5DF1FFBC7FC00A4F135 /* HUTSimpleVertex.glsl in Resources */,
 				E492D7A71FFB9ABD00AFCA00 /* Assets.xcassets in Resources */,
 				E492D7A51FFB9ABD00AFCA00 /* Main.storyboard in Resources */,
 			);
@@ -136,8 +158,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C911F5DD1FFBC7FC00A4F135 /* HUTVertex.swift in Sources */,
 				E492D7A21FFB9ABD00AFCA00 /* ViewController.swift in Sources */,
 				E492D7A01FFB9ABD00AFCA00 /* AppDelegate.swift in Sources */,
+				C911F5E01FFBC7FC00A4F135 /* HUTBaseEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
