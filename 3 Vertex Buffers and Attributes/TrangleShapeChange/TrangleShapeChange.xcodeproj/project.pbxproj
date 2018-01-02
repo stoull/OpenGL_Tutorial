@@ -12,6 +12,10 @@
 		C9A5DABC1FF9F89900871156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A5DABA1FF9F89900871156 /* Main.storyboard */; };
 		C9A5DABE1FF9F89900871156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9A5DABD1FF9F89900871156 /* Assets.xcassets */; };
 		C9A5DAC11FF9F89900871156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A5DABF1FF9F89900871156 /* LaunchScreen.storyboard */; };
+		C9A5DACA1FF9F99100871156 /* HUTBaseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A5DAC91FF9F99100871156 /* HUTBaseEffect.swift */; };
+		C9A5DACC1FF9FC1000871156 /* HUTVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A5DACB1FF9FC1000871156 /* HUTVertex.swift */; };
+		C9A5DACE1FF9FC3800871156 /* HUTSimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C9A5DACD1FF9FC3800871156 /* HUTSimpleFragment.glsl */; };
+		C9A5DAD01FF9FC4E00871156 /* HUTSimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C9A5DACF1FF9FC4E00871156 /* HUTSimpleVertex.glsl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,11 @@
 		C9A5DABD1FF9F89900871156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9A5DAC01FF9F89900871156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9A5DAC21FF9F89900871156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9A5DAC91FF9F99100871156 /* HUTBaseEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUTBaseEffect.swift; sourceTree = "<group>"; };
+		C9A5DACB1FF9FC1000871156 /* HUTVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUTVertex.swift; sourceTree = "<group>"; };
+		C9A5DACD1FF9FC3800871156 /* HUTSimpleFragment.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = HUTSimpleFragment.glsl; sourceTree = "<group>"; };
+		C9A5DACF1FF9FC4E00871156 /* HUTSimpleVertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = HUTSimpleVertex.glsl; sourceTree = "<group>"; };
+		C9A5DAD11FFA14D500871156 /* TrangleShapeChange-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrangleShapeChange-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +63,27 @@
 		C9A5DAB51FF9F89900871156 /* TrangleShapeChange */ = {
 			isa = PBXGroup;
 			children = (
+				C9A5DAC81FF9F92100871156 /* Resources */,
 				C9A5DAB61FF9F89900871156 /* AppDelegate.swift */,
 				C9A5DAB81FF9F89900871156 /* ViewController.swift */,
 				C9A5DABA1FF9F89900871156 /* Main.storyboard */,
 				C9A5DABD1FF9F89900871156 /* Assets.xcassets */,
 				C9A5DABF1FF9F89900871156 /* LaunchScreen.storyboard */,
 				C9A5DAC21FF9F89900871156 /* Info.plist */,
+				C9A5DAD11FFA14D500871156 /* TrangleShapeChange-Bridging-Header.h */,
 			);
 			path = TrangleShapeChange;
+			sourceTree = "<group>";
+		};
+		C9A5DAC81FF9F92100871156 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9A5DAC91FF9F99100871156 /* HUTBaseEffect.swift */,
+				C9A5DACB1FF9FC1000871156 /* HUTVertex.swift */,
+				C9A5DACD1FF9FC3800871156 /* HUTSimpleFragment.glsl */,
+				C9A5DACF1FF9FC4E00871156 /* HUTSimpleVertex.glsl */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +118,7 @@
 				TargetAttributes = {
 					C9A5DAB21FF9F89900871156 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -124,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A5DAC11FF9F89900871156 /* LaunchScreen.storyboard in Resources */,
+				C9A5DACE1FF9FC3800871156 /* HUTSimpleFragment.glsl in Resources */,
+				C9A5DAD01FF9FC4E00871156 /* HUTSimpleVertex.glsl in Resources */,
 				C9A5DABE1FF9F89900871156 /* Assets.xcassets in Resources */,
 				C9A5DABC1FF9F89900871156 /* Main.storyboard in Resources */,
 			);
@@ -136,6 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A5DACA1FF9F99100871156 /* HUTBaseEffect.swift in Sources */,
+				C9A5DACC1FF9FC1000871156 /* HUTVertex.swift in Sources */,
 				C9A5DAB91FF9F89900871156 /* ViewController.swift in Sources */,
 				C9A5DAB71FF9F89900871156 /* AppDelegate.swift in Sources */,
 			);
@@ -274,13 +301,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TrangleShapeChange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.april.TrangleShapeChange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TrangleShapeChange/TrangleShapeChange-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -290,13 +321,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TrangleShapeChange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.april.TrangleShapeChange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TrangleShapeChange/TrangleShapeChange-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
