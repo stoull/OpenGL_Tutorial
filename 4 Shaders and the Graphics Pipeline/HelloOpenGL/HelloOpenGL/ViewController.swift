@@ -13,11 +13,11 @@ class ViewController: GLKViewController {
     
     var vertextBuffer: GLuint = 0
     var indexBuffer: GLuint = 0
-    var shader: HUTBaseEffect?
+    var shader: HUTBaseEffect!
     var indexCount: GLsizei = 0
     
     func setupShader() {
-        shader = HUTBaseEffect.init(vertexShader: "HUTSimpleFragment", fragmentShader: "HUTSimpleVertex")
+        shader = HUTBaseEffect.init(vertexShader: "HUTSimpleVertex", fragmentShader: "HUTSimpleFragment")
     }
     
     func setupVertexBuffer() {
@@ -71,14 +71,16 @@ class ViewController: GLKViewController {
         
         glDisableVertexAttribArray(HUTVertextAttributes.position.rawValue)
         glDisableVertexAttribArray(HUTVertextAttributes.color.rawValue)
-        
-        
     }
     
-    func BUFFER_OFFSET(n: Int) -> UnsafeRawPointer {
-        let ptr: UnsafeRawPointer? = nil
-        return ptr! + n
+    func BUFFER_OFFSET(n: Int) -> UnsafeRawPointer? {
+        return UnsafeRawPointer(bitPattern: n)
     }
+    
+//    func BUFFER_OFFSET(n: Int) -> UnsafeRawPointer {
+//        let ptr: UnsafeRawPointer? = nil
+//        return ptr! + n
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
