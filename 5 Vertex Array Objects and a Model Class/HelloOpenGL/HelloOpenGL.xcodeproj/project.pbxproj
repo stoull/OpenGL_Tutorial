@@ -16,6 +16,8 @@
 		C930A0871FFE780D00994FCC /* HUTSimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C930A0831FFE780D00994FCC /* HUTSimpleFragment.glsl */; };
 		C930A0881FFE780D00994FCC /* HUTVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C930A0841FFE780D00994FCC /* HUTVertex.swift */; };
 		C930A0891FFE780D00994FCC /* HUTSimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C930A0851FFE780D00994FCC /* HUTSimpleVertex.glsl */; };
+		C930A08B1FFE813B00994FCC /* HUTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C930A08A1FFE813B00994FCC /* HUTModel.swift */; };
+		C930A08D1FFE814B00994FCC /* HUTSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C930A08C1FFE814B00994FCC /* HUTSquare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		C930A0831FFE780D00994FCC /* HUTSimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = HUTSimpleFragment.glsl; path = "../../../../4 Shaders and the Graphics Pipeline/HelloOpenGL/HelloOpenGL/Resources/HUTSimpleFragment.glsl"; sourceTree = "<group>"; };
 		C930A0841FFE780D00994FCC /* HUTVertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUTVertex.swift; path = "../../../../4 Shaders and the Graphics Pipeline/HelloOpenGL/HelloOpenGL/Resources/HUTVertex.swift"; sourceTree = "<group>"; };
 		C930A0851FFE780D00994FCC /* HUTSimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = HUTSimpleVertex.glsl; path = "../../../../4 Shaders and the Graphics Pipeline/HelloOpenGL/HelloOpenGL/Resources/HUTSimpleVertex.glsl"; sourceTree = "<group>"; };
+		C930A08A1FFE813B00994FCC /* HUTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUTModel.swift; sourceTree = "<group>"; };
+		C930A08C1FFE814B00994FCC /* HUTSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUTSquare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 				C930A0811FFE77FF00994FCC /* Resources */,
 				C930A06F1FFE77E400994FCC /* AppDelegate.swift */,
 				C930A0711FFE77E400994FCC /* ViewController.swift */,
+				C930A08E1FFE81F100994FCC /* Model */,
 				C930A0731FFE77E400994FCC /* Main.storyboard */,
 				C930A0761FFE77E400994FCC /* Assets.xcassets */,
 				C930A0781FFE77E400994FCC /* LaunchScreen.storyboard */,
@@ -82,6 +87,15 @@
 				C930A0841FFE780D00994FCC /* HUTVertex.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C930A08E1FFE81F100994FCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C930A08C1FFE814B00994FCC /* HUTSquare.swift */,
+				C930A08A1FFE813B00994FCC /* HUTModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +174,10 @@
 			files = (
 				C930A0861FFE780D00994FCC /* HUTBaseEffect.swift in Sources */,
 				C930A0881FFE780D00994FCC /* HUTVertex.swift in Sources */,
+				C930A08D1FFE814B00994FCC /* HUTSquare.swift in Sources */,
 				C930A0721FFE77E400994FCC /* ViewController.swift in Sources */,
 				C930A0701FFE77E400994FCC /* AppDelegate.swift in Sources */,
+				C930A08B1FFE813B00994FCC /* HUTModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
