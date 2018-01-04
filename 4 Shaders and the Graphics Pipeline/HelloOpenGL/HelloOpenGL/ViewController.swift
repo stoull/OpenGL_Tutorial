@@ -30,10 +30,10 @@ class ViewController: GLKViewController {
                                   2, 3, 0]
         
         // 使用 MemoryLayout.size(ofValue: vertices) 出错
-        let sizeOfVerties: Int = MemoryLayout<HUTVertex>.size * 3;
+        let sizeOfVerties: Int = MemoryLayout<HUTVertex>.size * 4;
         let sizeOfIndeices: Int = MemoryLayout<GLubyte>.size * 6;
         
-        indexCount = GLsizei(6)
+        indexCount = 6
         
         glGenBuffers(1, &vertextBuffer)
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), vertextBuffer)
