@@ -21,35 +21,27 @@ class ViewController: GLKViewController {
     }
     
     func setupVertexBuffer() {
-//        let vertices: [HUTVertex] = [HUTVertex.init(Position: (1, -1, 0), Color: (1, 0, 0, 1)),
-//                                     HUTVertex.init(Position: (1, 1, 0), Color: (0, 1, 0, 1)),
-//                                     HUTVertex.init(Position: (-1, 1, 0), Color: (0, 0, 1, 1)),
-//                                     HUTVertex.init(Position: (-1, -1, 0), Color: (0, 0, 0, 0))]
-        
-//        let vertices: [HUTVertex] = [HUTVertex.init(Position: (1, -1, 0, 1, 0, 0, 1)),
-//                                     HUTVertex.init(Position: (1, 1, 0, 0, 1, 0, 1)),
-//                                     HUTVertex.init(Position: (-1, 1, 0, 0, 0, 1, 1)),
-//                                     HUTVertex.init(Position: (-1, -1, 0, 0, 0, 0, 0))]
-        
-        let vertices : [HUTVertex] = [
-            HUTVertex( 1.0, -1.0, 0, 1.0, 0.0, 0.0, 1.0),
-            HUTVertex( 1.0,  1.0, 0, 0.0, 1.0, 0.0, 1.0),
-            HUTVertex(-1.0,  1.0, 0, 0.0, 0.0, 1.0, 1.0),
-            HUTVertex(-1.0, -1.0, 0, 1.0, 1.0, 0.0, 1.0)
-        ]
+        let vertices: [HUTVertex] = [HUTVertex.init(Position: (1, -1, 0), Color: (1, 0, 0, 1)),
+                                     HUTVertex.init(Position: (1, 1, 0), Color: (0, 1, 0, 1)),
+                                     HUTVertex.init(Position: (-1, 1, 0), Color: (0, 0, 1, 1)),
+                                     HUTVertex.init(Position: (-1, -1, 0), Color: (0, 0, 0, 0))]
         
         let indices: [GLubyte] = [0, 1, 2,
                                   2, 3, 0]
         
-        indexCount = GLsizei(MemoryLayout.size(ofValue: indices) / MemoryLayout.size(ofValue: indices[0]))
+        // 使用 MemoryLayout.size(ofValue: vertices) 出错
+        let sizeOfVerties: Int = MemoryLayout<HUTVertex>.size * 3;
+        let sizeOfIndeices: Int = MemoryLayout<GLubyte>.size * 6;
+        
+        indexCount = GLsizei(6)
         
         glGenBuffers(1, &vertextBuffer)
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), vertextBuffer)
-        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout.size(ofValue: vertices), vertices, GLenum(GL_STATIC_DRAW))
+        glBufferData(GLenum(GL_ARRAY_BUFFER), sizeOfVerties, vertices, GLenum(GL_STATIC_DRAW))
         
         glGenBuffers(1, &indexBuffer)
         glBindBuffer(GLenum(GL_ELEMENT_ARRAY_BUFFER), indexBuffer)
-        glBufferData(GLenum(GL_ELEMENT_ARRAY_BUFFER), MemoryLayout.size(ofValue: indices), indices, GLenum(GL_STATIC_DRAW))
+        glBufferData(GLenum(GL_ELEMENT_ARRAY_BUFFER), sizeOfIndeices, indices, GLenum(GL_STATIC_DRAW))
     }
     
     override func viewDidLoad() {
