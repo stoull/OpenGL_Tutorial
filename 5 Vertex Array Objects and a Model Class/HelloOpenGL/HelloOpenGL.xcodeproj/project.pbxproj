@@ -12,12 +12,12 @@
 		C930A0751FFE77E400994FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C930A0731FFE77E400994FCC /* Main.storyboard */; };
 		C930A0771FFE77E400994FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C930A0761FFE77E400994FCC /* Assets.xcassets */; };
 		C930A07A1FFE77E400994FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C930A0781FFE77E400994FCC /* LaunchScreen.storyboard */; };
-		C930A0861FFE780D00994FCC /* HUTBaseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C930A0821FFE780D00994FCC /* HUTBaseEffect.swift */; };
-		C930A0871FFE780D00994FCC /* HUTSimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C930A0831FFE780D00994FCC /* HUTSimpleFragment.glsl */; };
-		C930A0881FFE780D00994FCC /* HUTVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C930A0841FFE780D00994FCC /* HUTVertex.swift */; };
-		C930A0891FFE780D00994FCC /* HUTSimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = C930A0851FFE780D00994FCC /* HUTSimpleVertex.glsl */; };
 		C930A08B1FFE813B00994FCC /* HUTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C930A08A1FFE813B00994FCC /* HUTModel.swift */; };
 		C930A08D1FFE814B00994FCC /* HUTSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C930A08C1FFE814B00994FCC /* HUTSquare.swift */; };
+		E43382891FFF81F600114350 /* HUTBaseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43382851FFF81F600114350 /* HUTBaseEffect.swift */; };
+		E433828A1FFF81F600114350 /* HUTSimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E43382861FFF81F600114350 /* HUTSimpleVertex.glsl */; };
+		E433828B1FFF81F600114350 /* HUTSimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = E43382871FFF81F600114350 /* HUTSimpleFragment.glsl */; };
+		E433828C1FFF81F600114350 /* HUTVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43382881FFF81F600114350 /* HUTVertex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +28,12 @@
 		C930A0761FFE77E400994FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C930A0791FFE77E400994FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C930A07B1FFE77E400994FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C930A0821FFE780D00994FCC /* HUTBaseEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUTBaseEffect.swift; path = "../../../../4 Shaders and the Graphics Pipeline/HelloOpenGL/HelloOpenGL/Resources/HUTBaseEffect.swift"; sourceTree = "<group>"; };
-		C930A0831FFE780D00994FCC /* HUTSimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = HUTSimpleFragment.glsl; path = "../../../../4 Shaders and the Graphics Pipeline/HelloOpenGL/HelloOpenGL/Resources/HUTSimpleFragment.glsl"; sourceTree = "<group>"; };
-		C930A0841FFE780D00994FCC /* HUTVertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUTVertex.swift; path = "../../../../4 Shaders and the Graphics Pipeline/HelloOpenGL/HelloOpenGL/Resources/HUTVertex.swift"; sourceTree = "<group>"; };
-		C930A0851FFE780D00994FCC /* HUTSimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = HUTSimpleVertex.glsl; path = "../../../../4 Shaders and the Graphics Pipeline/HelloOpenGL/HelloOpenGL/Resources/HUTSimpleVertex.glsl"; sourceTree = "<group>"; };
 		C930A08A1FFE813B00994FCC /* HUTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUTModel.swift; sourceTree = "<group>"; };
 		C930A08C1FFE814B00994FCC /* HUTSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUTSquare.swift; sourceTree = "<group>"; };
+		E43382851FFF81F600114350 /* HUTBaseEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUTBaseEffect.swift; path = "../../../4 Shaders and the Graphics Pipeline/HelloOpenGL/HelloOpenGL/Resources/HUTBaseEffect.swift"; sourceTree = "<group>"; };
+		E43382861FFF81F600114350 /* HUTSimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = HUTSimpleVertex.glsl; path = "../../../4 Shaders and the Graphics Pipeline/HelloOpenGL/HelloOpenGL/Resources/HUTSimpleVertex.glsl"; sourceTree = "<group>"; };
+		E43382871FFF81F600114350 /* HUTSimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = HUTSimpleFragment.glsl; path = "../../../4 Shaders and the Graphics Pipeline/HelloOpenGL/HelloOpenGL/Resources/HUTSimpleFragment.glsl"; sourceTree = "<group>"; };
+		E43382881FFF81F600114350 /* HUTVertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUTVertex.swift; path = "../../../4 Shaders and the Graphics Pipeline/HelloOpenGL/HelloOpenGL/Resources/HUTVertex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 		C930A06E1FFE77E400994FCC /* HelloOpenGL */ = {
 			isa = PBXGroup;
 			children = (
-				C930A0811FFE77FF00994FCC /* Resources */,
+				E4902FAB1FFF813900B4F26E /* Resources */,
 				C930A06F1FFE77E400994FCC /* AppDelegate.swift */,
 				C930A0711FFE77E400994FCC /* ViewController.swift */,
 				C930A08E1FFE81F100994FCC /* Model */,
@@ -78,17 +78,6 @@
 			path = HelloOpenGL;
 			sourceTree = "<group>";
 		};
-		C930A0811FFE77FF00994FCC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C930A0821FFE780D00994FCC /* HUTBaseEffect.swift */,
-				C930A0831FFE780D00994FCC /* HUTSimpleFragment.glsl */,
-				C930A0851FFE780D00994FCC /* HUTSimpleVertex.glsl */,
-				C930A0841FFE780D00994FCC /* HUTVertex.swift */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		C930A08E1FFE81F100994FCC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +85,17 @@
 				C930A08A1FFE813B00994FCC /* HUTModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E4902FAB1FFF813900B4F26E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E43382851FFF81F600114350 /* HUTBaseEffect.swift */,
+				E43382871FFF81F600114350 /* HUTSimpleFragment.glsl */,
+				E43382861FFF81F600114350 /* HUTSimpleVertex.glsl */,
+				E43382881FFF81F600114350 /* HUTVertex.swift */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C930A07A1FFE77E400994FCC /* LaunchScreen.storyboard in Resources */,
-				C930A0871FFE780D00994FCC /* HUTSimpleFragment.glsl in Resources */,
-				C930A0891FFE780D00994FCC /* HUTSimpleVertex.glsl in Resources */,
+				E433828B1FFF81F600114350 /* HUTSimpleFragment.glsl in Resources */,
+				E433828A1FFF81F600114350 /* HUTSimpleVertex.glsl in Resources */,
 				C930A0771FFE77E400994FCC /* Assets.xcassets in Resources */,
 				C930A0751FFE77E400994FCC /* Main.storyboard in Resources */,
 			);
@@ -172,10 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C930A0861FFE780D00994FCC /* HUTBaseEffect.swift in Sources */,
-				C930A0881FFE780D00994FCC /* HUTVertex.swift in Sources */,
+				E43382891FFF81F600114350 /* HUTBaseEffect.swift in Sources */,
 				C930A08D1FFE814B00994FCC /* HUTSquare.swift in Sources */,
 				C930A0721FFE77E400994FCC /* ViewController.swift in Sources */,
+				E433828C1FFF81F600114350 /* HUTVertex.swift in Sources */,
 				C930A0701FFE77E400994FCC /* AppDelegate.swift in Sources */,
 				C930A08B1FFE813B00994FCC /* HUTModel.swift in Sources */,
 			);
