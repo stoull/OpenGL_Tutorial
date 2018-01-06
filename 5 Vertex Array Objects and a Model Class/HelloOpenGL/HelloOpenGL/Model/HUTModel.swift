@@ -65,7 +65,10 @@ class HUTModel: NSObject {
 
         // 使用 顶点数组对象(Vertex Array Object, VAO) 配置
         /*
-            
+            此外如不使用VAO则每次需要单独的
+            1. 配置顶点缓存
+            2. 配置index缓存
+            3. 使用glVertexAttribPointer函数 告诉OpenGL该如何解析顶点数据
          */
         glBindVertexArrayOES(vao)
         glDrawElements(GLenum(GL_TRIANGLES), GLsizei(indexCount), GLenum(GL_UNSIGNED_BYTE), nil)
