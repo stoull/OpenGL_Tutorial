@@ -82,8 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				C930A0BC2000C19B00994FCC /* HUTBaseEffect.swift */,
-				C930A0BD2000C19B00994FCC /* HUTSimpleFragment.glsl */,
 				C930A0BE2000C19B00994FCC /* HUTSimpleVertex.glsl */,
+				C930A0BD2000C19B00994FCC /* HUTSimpleFragment.glsl */,
 				C930A0BF2000C19B00994FCC /* HUTVertex.swift */,
 			);
 			path = Shader;
