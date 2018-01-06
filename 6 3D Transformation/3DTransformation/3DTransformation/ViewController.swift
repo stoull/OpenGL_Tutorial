@@ -17,6 +17,8 @@ class ViewController: GLKViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        delegate = self
+        
         let view: GLKView = self.view as! GLKView
         view.context = EAGLContext.init(api: .openGLES2)!
         
@@ -29,6 +31,8 @@ class ViewController: GLKViewController {
         shader = HUTBaseEffect.init(vertexShader: "HUTSimpleVertex", fragmentShader: "HUTSimpleFragment")
         if let realShader = shader {
             square = HUTSquare.init(shader: realShader)
+//            square?.position = GLKVector3.init(v: (0.5, -0.5, 0))
+            
         }else {
             print("Setup Square ERROR!")
         }
@@ -40,12 +44,19 @@ class ViewController: GLKViewController {
         square?.render()
     }
     
+    //
+    func update() {
+        square?.updateWithDelta(time: timeSinceLastUpdate)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+}
+extension ViewController: GLKViewControllerDelegate  {
+    func glkViewControllerUpdate(_ controller: GLKViewController) {
+        self.update()
+    }
 }
 

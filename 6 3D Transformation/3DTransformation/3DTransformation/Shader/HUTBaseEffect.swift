@@ -8,12 +8,17 @@
 
 import UIKit
 
+import GLKit
+
 class HUTBaseEffect: NSObject {
     
     var programHandle: GLuint = 0
+    
     var vertexShaderHandle: GLuint = 0
     var fragmentShaderHandle: GLuint = 0
     
+    var modelViewMatrix: GLKMatrix4?
+    var modelViewMatrixUniform :GLuint = 0
     
     public init(vertexShader: String, fragmentShader: String) {
         super.init()
@@ -22,6 +27,19 @@ class HUTBaseEffect: NSObject {
     
     public func prepareToDraw() {
         glUseProgram(programHandle)
+        
+        var matrixM = modelViewMatrix?.m
+        
+        
+        //        let m: UnsafePointer<GLfloat> = modelViewMatrix?.m
+        // WARN:
+        let components = MemoryLayout.size(ofValue: matrixM)/MemoryLayout.size(ofValue: matrixM?.0)
+        withUnsafePointer(to: &matrixM) {
+            $0.withMemoryRebound(to: GLfloat.self, capacity: components) {
+//                glUniformMatrix4fv(loc, 1, f, $0)
+                glUniformMatrix4fv(GLint(modelViewMatrixUniform), 1, 0, $0)
+            }
+        }
     }
     
     private func compileShader(vertexShader: String, fragmentShader: String) {
@@ -37,6 +55,9 @@ class HUTBaseEffect: NSObject {
         glBindAttribLocation(programHandle, GLuint(HUTVertextAttributes.color.rawValue), "a_Color")
         
         glLinkProgram(programHandle)
+        
+        self.modelViewMatrix = GLKMatrix4Identity
+        modelViewMatrixUniform = GLuint(glGetUniformLocation(programHandle, "u_ModelViewMatrix"))
         
         var linkSuccessStatus: GLint = GL_FALSE
         glGetProgramiv(programHandle, GLenum(GL_LINK_STATUS), &linkSuccessStatus)

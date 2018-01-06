@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import GLKit
 
 class HUTModel: NSObject {
-    var name: String?
-    var vao: GLuint = 0
     
-    var vertextBuffer: GLuint = 0
-    var indexBuffer: GLuint = 0
     var shader: HUTBaseEffect?
     
+    var position: GLKVector3 = GLKVector3.init(v: (0.0, 0.0, 0.0))
+    var rotationX: GLfloat = 0.0
+    var rotationY: GLfloat = 0.0
+    var rotationZ: GLfloat = 0.0
+    var scale: GLfloat = 1.0
+    
+    var name: String?
+    var vao: GLuint = 0
+    var vertextBuffer: GLuint = 0
+    var indexBuffer: GLuint = 0
     var indexCount: Int = 0
     var vetexCount: Int = 0
     
@@ -61,18 +68,28 @@ class HUTModel: NSObject {
     }
     
     func render() {
+        
+        shader?.modelViewMatrix = self.modelMatrix()
+        
         shader?.prepareToDraw()
-
-        // 使用 顶点数组对象(Vertex Array Object, VAO) 配置
-        /*
-            此外如不使用VAO则每次需要单独的
-            1. 配置顶点缓存
-            2. 配置index缓存
-            3. 使用glVertexAttribPointer函数 告诉OpenGL该如何解析顶点数据
-         */
+        
         glBindVertexArrayOES(vao)
         glDrawElements(GLenum(GL_TRIANGLES), GLsizei(indexCount), GLenum(GL_UNSIGNED_BYTE), nil)
         glBindVertexArrayOES(0)
+    }
+    
+    func modelMatrix() -> GLKMatrix4 {
+        var modelMatrixCreat = GLKMatrix4Identity
+        modelMatrixCreat = GLKMatrix4Translate(modelMatrixCreat, position.x, position.y, position.z)
+        modelMatrixCreat = GLKMatrix4Rotate(modelMatrixCreat, rotationX, 1, 0, 0)
+        modelMatrixCreat = GLKMatrix4Rotate(modelMatrixCreat, rotationY, 0, 1, 0)
+        modelMatrixCreat = GLKMatrix4Rotate(modelMatrixCreat, rotationZ, 0, 0, 1)
+        modelMatrixCreat = GLKMatrix4Scale(modelMatrixCreat, scale, scale, scale)
+        return modelMatrixCreat
+    }
+    
+    func updateWithDelta(time: TimeInterval) {
+        
     }
     
     private func BUFFER_OFFSET(n: Int) -> UnsafeRawPointer? {

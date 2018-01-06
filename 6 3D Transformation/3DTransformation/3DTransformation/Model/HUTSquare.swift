@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GLKit
 
 let vertices: [HUTVertex] = [HUTVertex.init(Position: (1, -1, 0), Color: (1, 0, 0, 1)),
                              HUTVertex.init(Position: (1, 1, 0), Color: (0, 1, 0, 1)),
@@ -24,6 +25,12 @@ class HUTSquare: HUTModel {
         
         super.init(name: "square", shader: shader, vertices: vertices, vertextCount: countOfVerties, inidices: indices, indexCount: countOfIndeices)
         
+    }
+    
+    
+    override func updateWithDelta(time: TimeInterval) {
+        let secsPerMove = 2.0
+        position = GLKVector3.init(v: (sinf(Float(CACurrentMediaTime() * 2*Double.pi / secsPerMove)), position.y, position.z))
     }
     
 }
