@@ -13,7 +13,6 @@ class ViewController: GLKViewController {
     
     var shader: HUTBaseEffect?
     var square: HUTSquare?
-    var cube: HUTCube?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +31,7 @@ class ViewController: GLKViewController {
         shader = HUTBaseEffect.init(vertexShader: "HUTSimpleVertex", fragmentShader: "HUTSimpleFragment")
         if let realShader = shader {
             square = HUTSquare.init(shader: realShader)
-            cube = HUTCube.init(shader: realShader)
-            realShader.projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(85.0), Float(self.view.bounds.size.width / self.view.bounds.size.height), 1, 150)
+            realShader.projectionViewMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(85.0), Float(self.view.bounds.size.width / self.view.bounds.size.height), 1, 150)
             
         }else {
             print("Setup Square ERROR!")
@@ -44,16 +42,16 @@ class ViewController: GLKViewController {
         glClearColor(200.0/225.0, 104.0/255.0, 114.0/255.0, 1.0)
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT))
         
-        let viewMatrix = GLKMatrix4MakeTranslation(0, -1, -5)
+        let viewMatrix = GLKMatrix4MakeTranslation(0, 0, -5)
         
-//        square?.renderWithParentModelViewMatrix(parentModelViewMatrix: viewMatrix)
-        cube?.renderWithParentModelViewMatrix(parentModelViewMatrix: viewMatrix)
+        square?.renderWithParentModelViewMatrix(parentModelViewMatrix: viewMatrix)
+        
+//        square?.render()
     }
     
     //
     func update() {
-//        square?.updateWithDelta(time: timeSinceLastUpdate)
-        cube?.updateWithDelta(time: timeSinceLastUpdate)
+        square?.updateWithDelta(time: timeSinceLastUpdate)
     }
 
     override func didReceiveMemoryWarning() {
