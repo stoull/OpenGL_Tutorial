@@ -19,8 +19,7 @@ class HUTBaseEffect: NSObject {
     
     var modelViewMatrix: GLKMatrix4?
     var modelViewMatrixUniform :GLuint = 0
-    
-    var projectionViewMatrix: GLKMatrix4?
+    var projectionMatrix: GLKMatrix4?
     var projectionMatrixUniform: GLuint = 0
     
     public init(vertexShader: String, fragmentShader: String) {
@@ -31,22 +30,20 @@ class HUTBaseEffect: NSObject {
     public func prepareToDraw() {
         glUseProgram(programHandle)
         
-        var modelViewmatrixM = modelViewMatrix?.m
+        var matrixM = modelViewMatrix?.m
+        
+        
         //        let m: UnsafePointer<GLfloat> = modelViewMatrix?.m
         // WARN:
-        let modelComponents = MemoryLayout.size(ofValue: modelViewmatrixM)/MemoryLayout.size(ofValue: modelViewmatrixM?.0)
-        withUnsafePointer(to: &modelViewmatrixM) {
-            $0.withMemoryRebound(to: GLfloat.self, capacity: modelComponents) {
+        let components = MemoryLayout.size(ofValue: matrixM)/MemoryLayout.size(ofValue: matrixM?.0)
+        withUnsafePointer(to: &matrixM) {
+            $0.withMemoryRebound(to: GLfloat.self, capacity: components) {
                 glUniformMatrix4fv(GLint(modelViewMatrixUniform), 1, 0, $0)
             }
         }
         
-        var projectionViewMatrixM = projectionViewMatrix?.m
-        //        let m: UnsafePointer<GLfloat> = modelViewMatrix?.m
-        // WARN:
-        let projectionComponents = MemoryLayout.size(ofValue: projectionViewMatrixM)/MemoryLayout.size(ofValue: projectionViewMatrixM?.0)
-        withUnsafePointer(to: &projectionViewMatrixM) {
-            $0.withMemoryRebound(to: GLfloat.self, capacity: projectionComponents) {
+        withUnsafePointer(to: &matrixM) {
+            $0.withMemoryRebound(to: GLfloat.self, capacity: components) {
                 glUniformMatrix4fv(GLint(projectionMatrixUniform), 1, 0, $0)
             }
         }
