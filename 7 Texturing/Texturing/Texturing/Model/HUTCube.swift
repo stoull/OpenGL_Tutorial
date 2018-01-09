@@ -77,6 +77,8 @@ class HUTCube: HUTModel {
         
         super.init(name: "cube", shader: shader, vertices: vertices, vertextCount: countOfVerties, inidices: indices, indexCount: countOfIndeices)
         
+        loadTexture(fileName: "lanlianhua")
+        
     }
 
     override func updateWithDelta(time: TimeInterval) {

@@ -26,6 +26,8 @@ class HUTModel: NSObject {
     var indexCount: Int = 0
     var vetexCount: Int = 0
     
+    var texture: GLuint = 0
+    
     init(name inName: String, shader inShader: HUTBaseEffect, vertices: Array<HUTVertex>, vertextCount inVertexCount: Int, inidices: Array<GLubyte>, indexCount inIndexCount: Int) {
         super.init()
         
@@ -61,6 +63,10 @@ class HUTModel: NSObject {
         let colorStrideSize = MemoryLayout<GLfloat>.size * 3
         glVertexAttribPointer(HUTVertextAttributes.color.rawValue, 4, GLenum(GL_FLOAT), GLboolean(GL_FALSE), GLsizei(strideSize), BUFFER_OFFSET(n: colorStrideSize))
         
+        glEnableVertexAttribArray(HUTVertextAttributes.texCoord.rawValue)
+        let texCoordStrideSize = MemoryLayout<GLfloat>.size * 7
+        glVertexAttribPointer(HUTVertextAttributes.texCoord.rawValue, 2, GLenum(GL_FLOAT), GLboolean(GL_FALSE), GLsizei(strideSize), BUFFER_OFFSET(n: texCoordStrideSize))
+        
         // 配置 顶点数组对象
         glBindVertexArrayOES(0)
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), 0)
@@ -70,6 +76,8 @@ class HUTModel: NSObject {
     func renderWithParentModelViewMatrix(parentModelViewMatrix: GLKMatrix4) {
         let modelViewMatrix = GLKMatrix4Multiply(parentModelViewMatrix, modelMatrix())
         shader?.modelViewMatrix = modelViewMatrix
+        
+        shader?.texture = texture
         
         shader?.prepareToDraw()
         
@@ -100,6 +108,23 @@ class HUTModel: NSObject {
     }
     
     func updateWithDelta(time: TimeInterval) {
+        
+    }
+    
+    func loadTexture(fileName: String) {
+        guard let shaderPath = Bundle.main.path(forResource: fileName, ofType: "png") else {
+            print("Failed to load Shader file")
+            return
+        }
+        
+        let options:[String : NSNumber] = [GLKTextureLoaderOriginBottomLeft : true]
+        
+        do {
+            let info = try GLKTextureLoader.texture(withContentsOfFile: shaderPath, options: options)
+            texture = info.name
+        } catch {
+            print("Error loading file: \(error.localizedDescription)")
+        }
         
     }
     

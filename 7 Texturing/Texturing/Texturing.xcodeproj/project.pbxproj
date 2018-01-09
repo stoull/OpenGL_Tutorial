@@ -21,6 +21,7 @@
 		E47B55402004E90000FB40FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B553F2004E90000FB40FC /* ViewController.swift */; };
 		E47B55422004EB0A00FB40FC /* lanlianhua.png in Resources */ = {isa = PBXBuildFile; fileRef = E47B55412004EB0A00FB40FC /* lanlianhua.png */; };
 		E47B55442004EB1A00FB40FC /* dungeon_01.png in Resources */ = {isa = PBXBuildFile; fileRef = E47B55432004EB1A00FB40FC /* dungeon_01.png */; };
+		E47B55462004F71000FB40FC /* razewarelogo_128.png in Resources */ = {isa = PBXBuildFile; fileRef = E47B55452004F70F00FB40FC /* razewarelogo_128.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E47B553F2004E90000FB40FC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E47B55412004EB0A00FB40FC /* lanlianhua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lanlianhua.png; sourceTree = "<group>"; };
 		E47B55432004EB1A00FB40FC /* dungeon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dungeon_01.png; sourceTree = "<group>"; };
+		E47B55452004F70F00FB40FC /* razewarelogo_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = razewarelogo_128.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				E47B55432004EB1A00FB40FC /* dungeon_01.png */,
 				E47B55412004EB0A00FB40FC /* lanlianhua.png */,
+				E47B55452004F70F00FB40FC /* razewarelogo_128.png */,
 				E47B55272004E88900FB40FC /* Shader */,
 				E47B55282004E89500FB40FC /* Model */,
 				E47B55152004E86400FB40FC /* AppDelegate.swift */,
@@ -169,6 +172,7 @@
 				E47B55202004E86400FB40FC /* LaunchScreen.storyboard in Resources */,
 				E47B55352004E8CF00FB40FC /* HUTSimpleFragment.glsl in Resources */,
 				E47B55422004EB0A00FB40FC /* lanlianhua.png in Resources */,
+				E47B55462004F71000FB40FC /* razewarelogo_128.png in Resources */,
 				E47B55382004E8CF00FB40FC /* HUTSimpleVertex.glsl in Resources */,
 				E47B55442004EB1A00FB40FC /* dungeon_01.png in Resources */,
 				E47B551D2004E86400FB40FC /* Assets.xcassets in Resources */,
