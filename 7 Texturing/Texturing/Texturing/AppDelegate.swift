@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  3DTransformation
+//  Texturing
 //
-//  Created by Stoull Hut on 06/01/2018.
-//  Copyright © 2018 CCApril. All rights reserved.
+//  Created by linkapp on 09/01/2018.
+//  Copyright © 2018 hut. All rights reserved.
 //
 
 import UIKit
