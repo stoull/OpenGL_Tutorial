@@ -23,6 +23,9 @@ class HUTBaseEffect: NSObject {
     var projectionViewMatrix: GLKMatrix4?
     var projectionMatrixUniform: GLuint = 0
     
+    var texture: GLuint = 0
+    var textUniform: GLuint = 0
+    
     public init(vertexShader: String, fragmentShader: String) {
         super.init()
         compileShader(vertexShader: vertexShader, fragmentShader: fragmentShader)
@@ -50,6 +53,11 @@ class HUTBaseEffect: NSObject {
                 glUniformMatrix4fv(GLint(projectionMatrixUniform), 1, 0, $0)
             }
         }
+        
+        // 纹理
+        glActiveTexture(GLenum(GL_TEXTURE1))
+        glBindTexture(GLenum(GL_TEXTURE_2D), texture)
+        glUniform1i(GLint(texture), 1)
     }
     
     private func compileShader(vertexShader: String, fragmentShader: String) {
@@ -63,12 +71,14 @@ class HUTBaseEffect: NSObject {
         
         glBindAttribLocation(programHandle, GLuint(HUTVertextAttributes.position.rawValue), "a_Position")
         glBindAttribLocation(programHandle, GLuint(HUTVertextAttributes.color.rawValue), "a_Color")
+        glBindAttribLocation(programHandle, GLuint(HUTVertextAttributes.texCoord.rawValue), "a_TexCoord")
         
         glLinkProgram(programHandle)
         
         self.modelViewMatrix = GLKMatrix4Identity
         modelViewMatrixUniform = GLuint(glGetUniformLocation(programHandle, "u_ModelViewMatrix"))
         projectionMatrixUniform = GLuint(glGetUniformLocation(programHandle, "u_ProjectionMatrix"))
+        textUniform = GLuint(glGetUniformLocation(programHandle, "u_Texture"))
         
         var linkSuccessStatus: GLint = GL_FALSE
         glGetProgramiv(programHandle, GLenum(GL_LINK_STATUS), &linkSuccessStatus)
