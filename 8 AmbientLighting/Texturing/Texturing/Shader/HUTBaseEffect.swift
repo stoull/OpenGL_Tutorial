@@ -26,6 +26,10 @@ class HUTBaseEffect: NSObject {
     var texture: GLuint = 0
     var textUniform: GLuint = 0
     
+    // 环境光
+    var lightColorUniform: GLuint = 0
+    var lightAmbientIntensityUniform: GLuint = 0
+
     public init(vertexShader: String, fragmentShader: String) {
         super.init()
         compileShader(vertexShader: vertexShader, fragmentShader: fragmentShader)
@@ -54,10 +58,14 @@ class HUTBaseEffect: NSObject {
             }
         }
         
-        // 纹理
+        // 设置纹理
         glActiveTexture(GLenum(GL_TEXTURE1))
         glBindTexture(GLenum(GL_TEXTURE_2D), texture)
         glUniform1i(GLint(texture), 1)
+        
+        // 设置环境光
+        glUniform3f(GLint(lightColorUniform), 1, 1, 1);
+        glUniform1f(GLint(lightAmbientIntensityUniform), 1.5);
     }
     
     private func compileShader(vertexShader: String, fragmentShader: String) {
@@ -79,6 +87,8 @@ class HUTBaseEffect: NSObject {
         modelViewMatrixUniform = GLuint(glGetUniformLocation(programHandle, "u_ModelViewMatrix"))
         projectionMatrixUniform = GLuint(glGetUniformLocation(programHandle, "u_ProjectionMatrix"))
         textUniform = GLuint(glGetUniformLocation(programHandle, "u_Texture"))
+        lightColorUniform = GLuint(glGetUniformLocation(programHandle, "u_Light.Color"))
+        lightAmbientIntensityUniform = GLuint(glGetUniformLocation(programHandle, "u_Light.AmbientIntensity"))
         
         var linkSuccessStatus: GLint = GL_FALSE
         glGetProgramiv(programHandle, GLenum(GL_LINK_STATUS), &linkSuccessStatus)
