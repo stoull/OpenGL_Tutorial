@@ -49,8 +49,8 @@ class ViewController: GLKViewController {
         // Backface culling
         glEnable(GLenum(GL_CULL_FACE))
         
-        let viewMatrix = GLKMatrix4MakeTranslation(0, 0, -5)
-        
+        var viewMatrix = GLKMatrix4MakeTranslation(0, 0, -5)
+        viewMatrix = GLKMatrix4Rotate(viewMatrix, GLKMathDegreesToRadians(20), 1, 0, 0)
         
 //        square?.render()
         

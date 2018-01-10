@@ -77,12 +77,12 @@ class HUTCube: HUTModel {
         
         super.init(name: "cube", shader: shader, vertices: vertices, vertextCount: countOfVerties, inidices: indices, indexCount: countOfIndeices)
         
-        loadTexture(fileName: "lanlianhua")
+        loadTexture(fileName: "dungeon_01")
         
     }
 
     override func updateWithDelta(time: TimeInterval) {
-        rotationZ += GLfloat(Double.pi * time)
-        rotationY += GLfloat(Double.pi * time)
+//        rotationZ += GLfloat(Double.pi * time)
+        rotationY += GLfloat(Double.pi/8 * time)
     }
 }
